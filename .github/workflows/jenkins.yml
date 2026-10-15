@@ -37,13 +37,13 @@ jobs:
 
       # Build the Docker image
       - name: 'Build and push JENKINS Docker container'
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
-         context: .
-         file: ./Dockerfile
-         push: true
-         tags: |
-           ${{ secrets.REGISTRY_URL }}/jenkins:polaris   
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: |
+            ${{ secrets.REGISTRY_URL }}/jenkins:polaris   
          
         #run: |-
           #DOCKER_TAG="${GAR_LOCATION}-docker.pkg.dev/${PROJECT_ID}/${REPOSITORY}/${IMAGE}:${GITHUB_SHA}"
