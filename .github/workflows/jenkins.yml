@@ -22,10 +22,10 @@ jobs:
       - name: 'Checkout'
         uses: 'actions/checkout@v4' # actions/checkout@v4
 
-      - name: check registry reachable
-        run: |
-           echo "DNS:" nslookup registry-test.metroscales.io" || true
-           echo "HTTPS:" curl -vk --connect-timeout 15 https://registry-test.metroscales.io/v2/ || true
+      #- name: check registry reachable
+      #  run: |
+      #     echo "DNS:" nslookup registry-test.metroscales.io" || true
+      #     echo "HTTPS:" curl -vk --connect-timeout 15 https://registry-test.metroscales.io/v2/ || true
       
 
       # Authenticate Docker to Google Cloud Artifact Registry
